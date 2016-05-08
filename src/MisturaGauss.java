@@ -1,91 +1,112 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class MisturaGauss extends theta {
-	private int n;
-	private ArrayList<theta> t;
-	
-	int M;
-	int d;
-	int K;
-	int p;
-	int q;
-	Theta theta = new Theta();
-	Amostra a=new Amostra();
-	Matrix b=new Matrix(p,q);
-	// confirmar parametros
-	public void mix(int n, ArrayList<Lista> t){
-		this.n=n;
-		this.t=t;
-	}
-	public double Prob( double v[] ){
-		for (int k = 0; k <= M; k++) {
-			double res=0;
-			return res+=Probj(k,v);
-		}
-	}
-		
-	public double Probj(int i, double v[]){
-		double w=theta.busca(i).acede_pesos();
-		double base= Math.pow(2*Math.pow(Math.PI, d)*MatrixMathematics.determinant(theta.busca(i).acede_cov()),-0.5);
-		Matrix l1=MatrixMathematics.transpose(subtract(converte(v(i)),converte(theta.busca(i).acede_media())));
-		Matrix l2=MatrixMathematics.inverse(theta.busca(i).acede_cov());
-		Matrix l3=MatrixMathematics.subtract(converte(v(i)),converte(theta.busca(i).acede_media())); //x??
-		Matrix l4=MatrixMathematics.multiply(l1,l2);
-		Matrix l5=MatrixMathematics.multiply(l4,l3);
-		double res=w*base*Math.pow(Math.E,Matrix.multiplyByConstant(-0.5)); //l5
-	}
-	
-	public Matrix converte(double vec []){
-		Matrix m=new Matrix(M,1);
-		for (int i = 0; i < M; i++) {
-			m.setValueAt(i, 1,vec[i]);
-			}
-		return m;
-	}
-			
-	public Gauss gau(int i){
-		return mixtu[i];//Para dar apenas uma gaussiana (a i-esima), retira-se o elemento i da lista mixtu
-	}
-	
-	
-    public double pi(int i, double v[]){ // expoente (m)??
-    	double res = Probj(i,v)/prob();
+public class MisturaGauss {
+
+    private ArrayList<Theta> params;
+
+    public MisturaGauss(int M){
+        //Construtor
+        params = new ArrayList<>(M);
+        //TODO Code for generate random parameters
+
     }
-	
-	
+
+    public double prob( double v[] ) throws NoSquareException, IllegalDimensionException {
+        int M = v.length;
+        double res=0;
+        for (int k = 0; k <= M; k++) {
+            res+=probj(k,v);
+        }
+        return res;
+    }
+
+    public double probj(int j, double v[]) throws NoSquareException, IllegalDimensionException {
+        int d = v.length; // A dimensao do vector e a dimensao do espaco
+        double w=params.get(j).getWeight();
+        Matrix cov = params.get(j).getCov_mat();
+        Matrix mu = converte(params.get(j).getMu_vec());
+        Matrix v_mat = converte(v);
+        double base= Math.pow(2*Math.pow(Math.PI, d)*MatrixMathematics.determinant(params.get(j).getCov_mat()),-0.5);
+        Matrix x_transposed=MatrixMathematics.transpose(MatrixMathematics.subtract(v_mat,mu));
+        Matrix x  = MatrixMathematics.subtract(v_mat,mu);
+        Matrix inv_cov=MatrixMathematics.inverse(cov);
+        Matrix l4=MatrixMathematics.multiply(x,inv_cov);
+        Matrix l5=MatrixMathematics.multiply(l4,x_transposed);
+        double exponent = mat_to_number(l5);
+        double res=w*base*Math.pow(Math.E,-0.5*exponent);
+        return res;
+    }
+
+    public double mat_to_number(Matrix m){
+        //Converte uma matriz 1x1 para um numero
+        if(m.getNcols()==1 && m.getNrows()==1){
+            return m.getValueAt(0,0);
+        }
+        return 0;
+    }
+
+    public Matrix converte(double vec []){
+        //Converte um vector coluna numa Matrix
+        int M = vec.length;
+        Matrix m=new Matrix(M,1);
+        for (int i = 0; i < M; i++) {
+            m.setValueAt(i, 1,vec[i]);
+        }
+        return m;
+    }
+
+
+    public double pi_j(int j, double[] v) throws IllegalDimensionException, NoSquareException {
+        return probj(j,v)/prob(v);
+    }
+
+
     //M-step
-    
-		public double pesos ( int i, double v[]){
-		double res=0;
-		for (int j=1; j<=K; j++){
-		res+=pi(i,v);
-		return res/K; //MultiplybyConstant K-1
-		}
-	}
-	
-	public double medias (int i, double v[]){
-		Matrix res1= new Matrix (M,d);
-		Matrix res2=new Matrix (M,d);
-		for (int j=1; j<=K; j++)
-			res1+=MatrixMathematics.multiply(converte(pi(i,v)),converte(v)); //
-		for (int u=1; u<=K; u++)
-			res2+=converte(pi(i,v));
-			return res1/res2; // multiply res -1
-		}
-		
-	}
-	public double covas (int i, double v[]){
-	double l3=0;
-	for (int j=1; j<=K; j++){
-			Matrix l1= MatrixMathematics.multiply(converte(pi(i,v)),MatrixMathematics.subtract(converte(v(i)),converte(theta.busca(i).acede_media())));
-			Matrix l2=MatrixMathematics.multiple (l1,MatrixMathematics.transpose(MatrixMathematics.subtract(converte(v(i)),converte(theta.busca(i).acede_media())));)
-	}
-		for (int u=1; u<=K; u++)
-			double l3+=pi(i,v);
-		
-		return l2/l3;	// multiply
-		}
-	}
+
+    public double actualiza_pesos( int i, Amostra a) throws IllegalDimensionException, NoSquareException {
+        int K = params.size(); //O tamanho da lista dos parametros é o numero de gaussianas
+        double res=0;
+        for (int j=0; j<a.length(); j++){
+            res = res + pi_j(i,a.element(i));
+        }
+        //params.get(i).setWeight(res/K);
+        return res/K;
+    }
+
+    public double[] actualiza_medias (int i, Amostra a) throws IllegalDimensionException, NoSquareException {
+        double[] res = new double[a.element(0).length]; // O vector de media tem a dimensao dos dados
+        Matrix mu = converte(params.get(i).getMu_vec());
+        Matrix P = mu; //Usado para poder actualizar
+        for (int j=0; j<a.length(); j++){
+            Matrix aux = converte(a.element(j));
+            double pj = probj(i,a.element(j));
+            Matrix aux1 = aux.multiplyByConstant(pj);
+            Matrix aux2 = aux1.multiplyByConstant(prob(a.element(j)));
+            P = MatrixMathematics.add(aux2,P);
+        }
+        for (int k=0;k<res.length;k++){
+            res[k] = P.getValueAt(k,0);
+        }
+        //params.get(i).setMu_vec(res);
+        return res;
+    }
+
+
+    public Matrix actualiza_covariancia (int j, Amostra a) throws IllegalDimensionException, NoSquareException {
+        int N = a.element(0).length; //A matriz de covariancia tem e NxN, sendo N a dimensao dos vectores
+        Matrix res = new Matrix(N,N);
+        for(int i = 0;i<a.length();i++){
+            Matrix x_mat = converte(a.element(i));
+            Matrix mu_mat = converte(params.get(j).getMu_vec());
+            Matrix x1 = MatrixMathematics.subtract(x_mat,mu_mat);
+            Matrix x2 = MatrixMathematics.transpose(x1);
+            Matrix aux = MatrixMathematics.multiply(x1,x2);
+            Matrix aux1 = aux.multiplyByConstant(pi_j(j,a.element(i)));
+            res = aux1.multiplyByConstant(1/pi_j(j,a.element(i)));
+        }
+        //params.get(j).setCov_mat(res);
+        return res;
+    }
+}
 		
 		
