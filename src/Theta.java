@@ -4,6 +4,7 @@ public class Theta {
 	double [] mu_vec;
 	Matrix cov_mat;
     Matrix inv_mat;
+    double det;
 
 
 	public Theta(double w, double[] mu, Matrix c) throws NoSquareException {
@@ -11,11 +12,22 @@ public class Theta {
 		this.mu_vec = mu;
 		this.cov_mat = c;
         this.inv_mat = MatrixMathematics.inverse(c);
+        this.det = MatrixMathematics.determinant(c);
 	}
 
     public Theta(){
 
     }
+
+    public double getDet() {
+        return det;
+    }
+
+    public void setDet(double det) {
+        this.det = det;
+    }
+
+    public void set_Det(Matrix m) throws NoSquareException {this.det= MatrixMathematics.determinant(m);}
 
     public Matrix getInv_mat(){return inv_mat;}
 

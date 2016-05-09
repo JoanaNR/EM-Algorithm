@@ -78,16 +78,22 @@ public class Algoritmo {
     public static void main(String args[]) throws NoSquareException, IllegalDimensionException {
         Algoritmo alg = new Algoritmo();
         alg.read();
-        alg.m = new MisturaGauss(3,alg.a.element(0).length);
+        alg.m = new MisturaGauss(2,alg.a.element(0).length);
+       // alg.m.build(alg.a);
+
         for (int i = 0;i<10;i++){
             for (int j = 0;j<3;j++){
                 alg.m.actualiza_pesos(j,alg.a);
-                System.out.println("Pesos");
+                //System.out.println("Pesos");
                 alg.m.actualiza_medias(j,alg.a);
-                System.out.println("Media");
+               // System.out.println(alg.m.params.get(0).getMu_vec()[0]);
+                //System.out.println("Media");
                 alg.m.actualiza_covariancia(j,alg.a);
-                System.out.println("Cov");
+                //System.out.println("Cov");
             }
+            System.out.println(alg.m.params.get(0).getWeight() + ", " + alg.m.params.get(1).getWeight() + "," + alg.m.params.get(2).getWeight());
+             System.out.println(alg.m.params.get(0).getMu_vec()[0]);
+
         }
     }
 

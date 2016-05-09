@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62b87587-a386-46a8-a052-d611e88713ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_35_bin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Algoritmo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Amostra.class" afterPath="$PROJECT_DIR$/bin/Amostra.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Data.class" afterPath="$PROJECT_DIR$/bin/Data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/FuncoesEM.class" afterPath="$PROJECT_DIR$/bin/FuncoesEM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/G$1.class" afterPath="$PROJECT_DIR$/bin/G$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/G.class" afterPath="$PROJECT_DIR$/bin/G.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/IllegalDimensionException.class" afterPath="$PROJECT_DIR$/bin/IllegalDimensionException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/ListTimes.class" afterPath="$PROJECT_DIR$/bin/ListTimes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Lista.class" afterPath="$PROJECT_DIR$/bin/Lista.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Matrix.class" afterPath="$PROJECT_DIR$/bin/Matrix.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/MatrixMathematics.class" afterPath="$PROJECT_DIR$/bin/MatrixMathematics.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Algoritmo.class" afterPath="$PROJECT_DIR$/bin/Algoritmo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/MisturaGauss.class" afterPath="$PROJECT_DIR$/bin/MisturaGauss.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/NoSquareException.class" afterPath="$PROJECT_DIR$/bin/NoSquareException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Theta.class" afterPath="$PROJECT_DIR$/bin/Theta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projecto.iml" afterPath="$PROJECT_DIR$/Projecto.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data.java" afterPath="$PROJECT_DIR$/src/Data.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Algoritmo.java" afterPath="$PROJECT_DIR$/src/Algoritmo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MisturaGauss.java" afterPath="$PROJECT_DIR$/src/MisturaGauss.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Theta.java" afterPath="$PROJECT_DIR$/src/Theta.java" />
     </list>
@@ -46,7 +32,45 @@
     <favorites_list name="EM-Algorithm" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Algoritmo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algoritmo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MisturaGauss.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MisturaGauss.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="151" column="30" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding>
+                <element signature="e#95#96#0" expanded="true" />
+                <element signature="e#136#137#0" expanded="true" />
+                <element signature="e#187#188#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,9 +92,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/Amostra.java" />
         <option value="$PROJECT_DIR$/src/Data.java" />
-        <option value="$PROJECT_DIR$/src/Algoritmo.java" />
         <option value="$PROJECT_DIR$/src/Theta.java" />
+        <option value="$PROJECT_DIR$/src/pi.java" />
         <option value="$PROJECT_DIR$/src/MisturaGauss.java" />
+        <option value="$PROJECT_DIR$/src/Algoritmo.java" />
       </list>
     </option>
   </component>
@@ -434,10 +459,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -446,7 +471,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44164038" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -468,15 +493,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MisturaGauss.java</url>
-          <line>110</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -510,18 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Matrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MatrixMathematics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -538,29 +543,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MisturaGauss.java">
+    <entry file="file://$PROJECT_DIR$/src/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="334">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Theta.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algoritmo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="73">
+          <caret line="412" column="0" selection-start-line="412" selection-start-column="0" selection-end-line="412" selection-end-column="0" />
+          <folding>
+            <element signature="e#14647#14648#0" expanded="true" />
+            <element signature="e#14692#14693#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -571,6 +571,47 @@
           <folding>
             <element signature="e#277#278#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Theta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#436#437#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#95#96#0" expanded="true" />
+            <element signature="e#136#137#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MisturaGauss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="151" column="30" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algoritmo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
