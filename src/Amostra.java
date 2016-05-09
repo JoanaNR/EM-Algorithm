@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Amostra {
+public class Amostra {//amostra definida como uma ArrayList
 	public ArrayList<double[]> a;
 
 	public Amostra(){
